@@ -1,0 +1,39 @@
+name: Build
+
+on:
+    push:
+      tags:
+        - "v*"
+
+
+jobs:
+  build:
+    name: Build and release React Recipe
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@main
+        with:
+          extra-conf: |
+            substituters = root ${{ github.actor }} https://cache.nixos.org
+            sandbox = relaxed
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+      - run: |
+          cd frontend-reciperium
+          nix build --fallback --system x86_64-linux --option sandbox relaxed .#react-recipe --json
+  storybook:
+    name: Build and release Storybook
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@main
+        with:
+          extra-conf: |
+            substituters = root ${{ github.actor }} https://cache.nixos.org
+            sandbox = relaxed
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+      - run: |
+          cd frontend-reciperium
+          nix build --fallback --system x86_64-linux --option sandbox relaxed .#storybook-static --json

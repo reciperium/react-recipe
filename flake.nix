@@ -41,7 +41,9 @@
               # NPM writes cache directories etc to $HOME.
               export HOME=$TMP
             '';
-            buildInputs = [ nodejs ];
+
+            # certs are required by npm ci
+            buildInputs = [ nodejs pkgs.cacert ];
             buildPhase = ''
               ${nodejs}/bin/npm ci
             '';
@@ -51,14 +53,12 @@
               mv node_modules $out/node_modules
             '';
           };
-        in
-        {
-          packages = {
-            react-recipe = pkgs.stdenv.mkDerivation {
+
+          react-recipe = pkgs.stdenv.mkDerivation {
               name = "react-recipe";
               src = gitignore.lib.gitignoreSource ./.;
               nativeBuildInputs = with pkgs; [
-                nodejs
+                nodejs_20
               ] ++ lib.optionals stdenv.isDarwin [
                 libiconv
                 darwin.apple_sdk_11_0.frameworks.Cocoa
@@ -83,12 +83,16 @@
                 mv dist $out
               '';
             };
+        in
+        {
+          packages = {
+            react-recipe = react-recipe;
 
             storybook-static = pkgs.stdenv.mkDerivation {
-              name = "react-recipe";
+              name = "storybook-static";
               src = gitignore.lib.gitignoreSource ./.;
               nativeBuildInputs = with pkgs; [
-                nodejs
+                nodejs_20
               ] ++ lib.optionals stdenv.isDarwin [
                 libiconv
                 darwin.apple_sdk_11_0.frameworks.Cocoa
@@ -116,16 +120,11 @@
           };
 
           devenv.shells.default = {
-            name = "react-recipe";
+            name = "react-recipe-shell";
             packages = with pkgs; [
               just
               commitizen
-
-            ] ++ [ nodejs ] ++ lib.optionals stdenv.isDarwin [
-              libiconv
-              darwin.apple_sdk_11_0.frameworks.Cocoa
-              darwin.apple_sdk_11_0.frameworks.CoreServices
-              darwin.apple_sdk_11_0.frameworks.Security
+              nodejs_20
             ];
 
             enterShell = ''

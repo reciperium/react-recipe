@@ -1,3 +1,9 @@
+## v0.1.7 (2024-08-12)
+
+### Fix
+
+- **ci**: copy instead of move in builds
+
 ## v0.1.6 (2024-08-12)
 
 ### Fix

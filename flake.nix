@@ -46,6 +46,7 @@
             buildInputs = [ nodejs pkgs.cacert ];
             buildPhase = ''
               ${nodejs}/bin/npm ci
+              ${nodejs}/bin/npm run build || true
             '';
 
             installPhase = ''

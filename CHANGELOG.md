@@ -1,3 +1,9 @@
+## v0.1.6 (2024-08-12)
+
+### Fix
+
+- **ci**: build package while installing node modules to prevent issues
+
 ## v0.1.5 (2024-08-12)
 
 ### Fix

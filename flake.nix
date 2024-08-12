@@ -114,7 +114,7 @@
               '';
 
               installPhase = ''
-                mv dist $out
+                mv storybook-static $out
               '';
             };
           };

@@ -1,9 +1,11 @@
 {
   "name": "@reciperium/react-recipe",
   "description": "React components for recipe-lang",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/react-recipe.umd.cjs",
   "module": "./dist/react-recipe.js",
   "exports": {

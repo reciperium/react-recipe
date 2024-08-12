@@ -55,35 +55,33 @@
             '';
           };
 
-          react-recipe = pkgs.stdenv.mkDerivation {
-              name = "react-recipe2";
-              src = gitignore.lib.gitignoreSource ./.;
-              nativeBuildInputs = [ nodejs ];
+          # react-recipe = pkgs.stdenv.mkDerivation {
+          #     name = "react-recipe2";
+          #     src = gitignore.lib.gitignoreSource ./.;
+          #     nativeBuildInputs = [ nodejs ];
 
 
-              # Normally required by autotools, but in this case we configure env variables for the
-              # upcoming build phase.
-              configurePhase = ''
-                # NPM writes cache directories etc to $HOME.
-                ln -sf ${node_modules}/node_modules node_modules
-                export HOME=$TMP
-              '';
+          #     # Normally required by autotools, but in this case we configure env variables for the
+          #     # upcoming build phase.
+          #     configurePhase = ''
+          #       # NPM writes cache directories etc to $HOME.
+          #       ln -sf ${node_modules}/node_modules node_modules
+          #       export HOME=$TMP
+          #     '';
 
-              # Compiling phase
-              buildPhase = ''
-                ${nodejs}/bin/npm run build
-              '';
+          #     # Compiling phase
+          #     buildPhase = ''
+          #       ${nodejs}/bin/npm run build
+          #     '';
 
-              installPhase = ''
-                cp -R dist $out
-              '';
-            };
+          #     installPhase = ''
+          #       cp -R dist $out
+          #     '';
+          #   };
         in
         {
           packages = {
-            react-recipe = react-recipe;
-
-            react-recipe2 = pkgs.buildNpmPackage {
+            react-recipe = pkgs.buildNpmPackage {
               name = "react-recipe";
               src = gitignore.lib.gitignoreSource ./.;
               npmDepsHash = "sha256-RI7aOpeZbPXXxFcVHD2y5PMkD7Bhrv2LokeSnnH69mM=";

@@ -1,3 +1,9 @@
+## v0.2.1 (2024-08-12)
+
+### Fix
+
+- **ts**: properly generate ts types
+
 ## v0.2.0 (2024-08-12)
 
 ### Feat

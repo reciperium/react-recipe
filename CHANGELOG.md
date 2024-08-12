@@ -1,3 +1,9 @@
+## v0.2.0 (2024-08-12)
+
+### Feat
+
+- add ts declaration files
+
 ## v0.1.7 (2024-08-12)
 
 ### Fix

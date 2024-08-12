@@ -58,14 +58,7 @@
           react-recipe = pkgs.stdenv.mkDerivation {
               name = "react-recipe";
               src = gitignore.lib.gitignoreSource ./.;
-              nativeBuildInputs = with pkgs; [
-                nodejs_20
-              ] ++ lib.optionals stdenv.isDarwin [
-                libiconv
-                darwin.apple_sdk_11_0.frameworks.Cocoa
-                darwin.apple_sdk_11_0.frameworks.CoreServices
-                darwin.apple_sdk_11_0.frameworks.Security
-              ];
+              nativeBuildInputs = [ nodejs ];
 
               # Normally required by autotools, but in this case we configure env variables for the
               # upcoming build phase.
@@ -81,7 +74,7 @@
               '';
 
               installPhase = ''
-                mv dist $out
+                cp -R dist $out
               '';
             };
         in
@@ -115,7 +108,7 @@
               '';
 
               installPhase = ''
-                mv storybook-static $out
+                cp -R storybook-static $out
               '';
             };
           };

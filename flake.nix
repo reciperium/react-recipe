@@ -56,9 +56,10 @@
           };
 
           react-recipe = pkgs.stdenv.mkDerivation {
-              name = "react-recipe";
+              name = "react-recipe2";
               src = gitignore.lib.gitignoreSource ./.;
               nativeBuildInputs = [ nodejs ];
+              npmDepsHash = "sha256-K/GCQNtEFXzPGGYUzqixgkMFV64q40UwqsvxUIAtATw=";
 
               # Normally required by autotools, but in this case we configure env variables for the
               # upcoming build phase.
@@ -81,6 +82,19 @@
         {
           packages = {
             react-recipe = react-recipe;
+
+            react-recipe2 = pkgs.buildNpmPackage {
+              name = "react-recipe";
+              src = gitignore.lib.gitignoreSource ./.;
+              nativeBuildInputs = [ nodejs ];
+              buildPhase = ''
+                ${nodejs}/bin/npm run build --unsafe-perm=true
+              '';
+              installPhase = ''
+                mkdir -p $out
+                cp -R dist $out
+              '';
+            };
 
             storybook-static = pkgs.stdenv.mkDerivation {
               name = "storybook-static";

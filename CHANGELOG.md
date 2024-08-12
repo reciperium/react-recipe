@@ -1,3 +1,9 @@
+## v0.1.5 (2024-08-12)
+
+### Fix
+
+- **ci**: nix storybook installPhase
+
 ## v0.1.4 (2024-08-12)
 
 ### Fix

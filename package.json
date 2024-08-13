@@ -14,6 +14,10 @@
       "require": "./dist/react-recipe.umd.cjs"
     }
   },
+  "repository": {
+    "url": "git+https://github.com/reciperium/react-recipe.git",
+    "type": "git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

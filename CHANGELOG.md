@@ -1,3 +1,10 @@
+## v0.2.4 (2024-08-13)
+
+### Fix
+
+- **web**: deploy statics to github pages
+- **ci**: update npm hash
+
 ## v0.2.3 (2024-08-12)
 
 ### Fix

@@ -84,7 +84,7 @@
             react-recipe = pkgs.buildNpmPackage {
               name = "react-recipe";
               src = gitignore.lib.gitignoreSource ./.;
-              npmDepsHash = "sha256-RI7aOpeZbPXXxFcVHD2y5PMkD7Bhrv2LokeSnnH69mM=";
+              npmDepsHash = "sha256-l3iC/SD50c6xu59aTFD8Trz0kFn1heolKblaiKc8IOk=";
               nativeBuildInputs = [ nodejs ];
               buildPhase = ''
                 ${nodejs}/bin/npm run build --unsafe-perm=true

@@ -84,7 +84,11 @@
             react-recipe = pkgs.buildNpmPackage {
               name = "react-recipe";
               src = gitignore.lib.gitignoreSource ./.;
-              npmDepsHash = "sha256-l3iC/SD50c6xu59aTFD8Trz0kFn1heolKblaiKc8IOk=";
+              npmDeps = pkgs.importNpmLock {
+                npmRoot = ./.;
+              };
+              npmConfigHook = pkgs.importNpmLock.npmConfigHook;
+
               nativeBuildInputs = [ nodejs ];
               buildPhase = ''
                 ${nodejs}/bin/npm run build --unsafe-perm=true
@@ -132,6 +136,7 @@
               just
               commitizen
               nodejs_20
+              prefetch-npm-deps
             ];
 
             enterShell = ''

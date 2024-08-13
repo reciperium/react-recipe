@@ -1,3 +1,9 @@
+## v0.2.6 (2024-08-13)
+
+### Fix
+
+- add repository url to package.json
+
 ## v0.2.5 (2024-08-13)
 
 ### Fix

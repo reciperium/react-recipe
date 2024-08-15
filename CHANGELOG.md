@@ -1,3 +1,9 @@
+## v0.2.7 (2024-08-15)
+
+### Refactor
+
+- flakes for react-recipe and storybook
+
 ## v0.2.6 (2024-08-13)
 
 ### Fix

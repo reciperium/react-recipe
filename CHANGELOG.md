@@ -1,3 +1,9 @@
+## v0.2.8 (2024-08-19)
+
+### Refactor
+
+- improve storybook
+
 ## v0.2.7 (2024-08-15)
 
 ### Refactor

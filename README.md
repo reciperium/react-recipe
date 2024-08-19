@@ -11,6 +11,12 @@
 npm install
 ```
 
+## Dev server
+
+```sh
+just run
+```
+
 ## Building
 
 ```sh

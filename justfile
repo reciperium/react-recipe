@@ -20,7 +20,11 @@ bump:
 
 # build nix expression for the npm package
 nix-build:
-    nix build --fallback --option sandbox relaxed .#react-recipe --out-link dist
+    nix build --fallback --option sandbox relaxed .#react-recipe
+
+copy-nix-build:
+    mkdir -p dist
+    cp -r result/* dist
 
 # build nix expression for the storybook static files
 nix-build-storybook:

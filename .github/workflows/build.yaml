@@ -26,7 +26,10 @@ jobs:
             sandbox = relaxed
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - run: |
-          nix build --fallback --system x86_64-linux --option sandbox relaxed .#react-recipe --json --out-link dist
+          nix build --fallback --system x86_64-linux --option sandbox relaxed .#react-recipe --json --out-link result
+      - run: |
+          mkdir dist
+          cp -r result/* dist
       - run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

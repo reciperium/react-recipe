@@ -28,4 +28,8 @@ copy-nix-build:
 
 # build nix expression for the storybook static files
 nix-build-storybook:
-    nix build --fallback --option sandbox relaxed .#storybook-static --out-link static
+    nix build --fallback --option sandbox relaxed .#storybook-static --out-link storybook-static
+
+copy-nix-build-storybook:
+    mkdir -p dist
+    cp -r storybook-static/* static

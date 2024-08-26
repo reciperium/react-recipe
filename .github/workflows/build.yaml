@@ -47,6 +47,9 @@ jobs:
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - run: |
           nix build --fallback --system x86_64-linux --option sandbox relaxed .#storybook-static --json --out-link static
+      - run: |
+          mkdir -p static
+          cp -r storybook-static/* static
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:

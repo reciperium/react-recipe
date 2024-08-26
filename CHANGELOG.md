@@ -1,3 +1,9 @@
+## v0.2.9 (2024-08-26)
+
+### Fix
+
+- improve vite config
+
 ## v0.2.8 (2024-08-19)
 
 ### Refactor

@@ -1,3 +1,9 @@
+## v0.3.1 (2024-08-30)
+
+### Fix
+
+- recipeRef under instructions now work
+
 ## v0.3.0 (2024-08-28)
 
 ### Feat

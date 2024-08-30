@@ -4,11 +4,23 @@ import Ingredient from "./Ingredient";
 import RecipeRef from "./RecipeRef";
 import Material from "./Material";
 import Timer from "./Timer";
+import React from "react";
 
 export type Props = {
   tokens: Token[];
+  RecipeRefResolver?: React.ElementType;
+  baseUrl: string;
 };
-export default function Instructions({ tokens }: Props) {
+
+const RecipeRefResolverDefault: React.FunctionComponent<
+  React.PropsWithChildren
+> = ({ children }) => <>{children}</>;
+
+export default function Instructions({
+  tokens,
+  RecipeRefResolver = RecipeRefResolverDefault,
+  baseUrl,
+}: Props) {
   const firstIndex =
     tokens?.findIndex(
       (token) => token.token !== "Metadata" && token.token !== "Space"
@@ -37,8 +49,10 @@ export default function Instructions({ tokens }: Props) {
                 key={i}
                 quantity={token.content.quantity}
                 unit={token.content.unit}
+                path={token.content.name}
+                baseUrl={baseUrl}
               >
-                {token.content.name}
+                <RecipeRefResolver>{token.content.name}</RecipeRefResolver>
               </RecipeRef>
             );
           case "Material":

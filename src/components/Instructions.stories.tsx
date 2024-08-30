@@ -12,8 +12,9 @@ Add {boiled chickpeas}(400 gr) to the &{blender} with {garlic}(1),
 
 Blend for t{3 minutes}.
 
+Let's test a recipeRef as well: @{woile/teff-crepes}.
 Serve or store`;
 
 const parsedRecipe = parse(recipe);
 const tokens: Token[] = parsedRecipe.tokens;
-export const Default = () => <Instructions tokens={tokens} />;
+export const Default = () => <Instructions tokens={tokens} baseUrl={"https://reciperium.com"}/>;

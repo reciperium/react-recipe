@@ -6,6 +6,7 @@ import Word from "./components/Word";
 import { Switch } from "./components/Switch";
 import RecipeRef from "./components/RecipeRef";
 import Material from "./components/Material";
+import { ind } from "./utils";
 
 export {
   RecipeProvider,
@@ -17,5 +18,6 @@ export {
   Word,
   Switch,
   RecipeRef,
-  Material
+  Material,
+  ind
 };

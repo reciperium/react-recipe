@@ -28,3 +28,23 @@ export const createTitle = (
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
+
+
+/**
+ * Takes a TemplateStringsArray and returns a concatenated string with trimmed lines.
+ *
+ * Useful to write recipes in a more readable way.
+ *
+ * @param strings - The TemplateStringsArray to process.
+ * @returns The concatenated string with trimmed lines.
+ */
+export function ind(strings: TemplateStringsArray) {
+  return strings
+    .map((s) =>
+      s
+        .split("\n")
+        .map((s) => s.trim())
+        .join("\n")
+    )
+    .join("");
+}

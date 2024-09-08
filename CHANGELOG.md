@@ -1,3 +1,9 @@
+## v0.5.3 (2024-09-08)
+
+### Fix
+
+- **CookMode**: add title only if not supported
+
 ## v0.5.2 (2024-09-08)
 
 ### Fix

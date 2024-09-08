@@ -1,3 +1,9 @@
+## v0.5.2 (2024-09-08)
+
+### Fix
+
+- modules configuration
+
 ## v0.5.1 (2024-09-08)
 
 ### Fix

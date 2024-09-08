@@ -1,3 +1,9 @@
+## v0.5.0 (2024-09-08)
+
+### Feat
+
+- add CookMode component
+
 ## v0.4.0 (2024-08-31)
 
 ### Feat

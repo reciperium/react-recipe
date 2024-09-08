@@ -1,0 +1,3 @@
+import{j as e}from"./jsx-runtime-CkxqCPlQ.js";import{C as s}from"./CookMode-x7WzQadO.js";import"./index-DJO9vBfz.js";import"./Switch-CB69zTX9.js";import"./index-C3_RuDJz.js";import"./utils-yCg0HzLX.js";const c={component:s},o=()=>e.jsxs("span",{className:"flex items-center gap-2",children:[e.jsx(s,{})," Cook Mode"]});o.__docgenInfo={description:"",methods:[],displayName:"Default"};o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`() => <span className="flex items-center gap-2">
+    <CookMode /> Cook Mode
+  </span>`,...o.parameters?.docs?.source}}};const d=["Default"];export{o as Default,d as __namedExportsOrder,c as default};

@@ -1,3 +1,9 @@
+## v0.5.1 (2024-09-08)
+
+### Fix
+
+- change vite configuration
+
 ## v0.5.0 (2024-09-08)
 
 ### Feat

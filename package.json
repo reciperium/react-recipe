@@ -7,7 +7,7 @@
     "dist"
   ],
   "types": "dist/react-recipe.d.ts",
-  "main": "./dist/react-recipe.js",
+  "main": "./dist/react-recipe.umd.cjs",
   "module": "./dist/react-recipe.js",
   "exports": {
     ".": {

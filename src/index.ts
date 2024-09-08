@@ -1,23 +1,28 @@
-import { RecipeProvider, useRecipeContext, recipeThemes } from "./provider";
-import Instructions from "./components/Instructions";
+import CookMode from "./components/CookMode";
 import Ingredient from "./components/Ingredient";
+import Instructions from "./components/Instructions";
+import Material from "./components/Material";
+import RecipeRef from "./components/RecipeRef";
+import { Switch } from "./components/Switch";
 import Timer from "./components/Timer";
 import Word from "./components/Word";
-import { Switch } from "./components/Switch";
-import RecipeRef from "./components/RecipeRef";
-import Material from "./components/Material";
+import { useWakeLock } from "./hooks/use-wake-lock";
+import { RecipeProvider, recipeThemes, useRecipeContext } from "./provider";
 import { ind } from "./utils";
 
 export {
-  RecipeProvider,
-  useRecipeContext,
-  recipeThemes,
-  Instructions,
+  CookMode,
+  ind,
   Ingredient,
-  Timer,
-  Word,
-  Switch,
-  RecipeRef,
+  Instructions,
   Material,
-  ind
+  RecipeProvider,
+  RecipeRef,
+  recipeThemes,
+  Switch,
+  Timer,
+  useRecipeContext,
+  useWakeLock,
+  Word
 };
+

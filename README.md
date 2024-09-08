@@ -2,35 +2,40 @@
 
 > Components for [recipe-lang](https://github.com/reciperium/recipe-lang)
 
-![NPM Version](https://img.shields.io/npm/v/%40reciperium%2Freact-recipe?style=flat-square)
+[![NPM Version](https://img.shields.io/npm/v/%40reciperium%2Freact-recipe?style=flat-square)](https://www.npmjs.com/package/@reciperium/react-recipe)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/reciperium/react-recipe/build.yaml?style=flat-square)
 
-## Install
+- Documentation: https://reciperium.github.io/react-recipe
+- Learn: https://learn.reciperium.com/
+- Playground: https://play.reciperium.com/
+
+## Installation
 
 ```sh
-npm install
+npm add @reciperium/react-recipe
 ```
 
-## Dev server
+## Contributing
+
+### Dev server
 
 ```sh
 just run
 ```
 
-## Building
+### Building
 
 ```sh
 just build
 ```
 
-## Building storybook
+### Building storybook
 
 ```sh
 just build-storybook
 ```
 
-## Publish
-
+### Publish
 
 ```sh
 npm publish

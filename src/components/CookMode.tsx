@@ -13,17 +13,11 @@ export default function CookMode({ ...props }: Props): React.ReactNode {
 
   return (
     <Switch
+      {...(!isSupported && { title: "Cook Mode is not supported" })}
       {...props}
       checked={!released}
       onCheckedChange={() => (released === false ? release() : request())}
       disabled={!isSupported}
-      title={
-        isSupported
-          ? released
-            ? "Cook Mode is off"
-            : "Cook Mode is on"
-          : "Cook Mode is not supported"
-      }
     />
   );
 }

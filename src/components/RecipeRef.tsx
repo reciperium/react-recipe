@@ -1,6 +1,5 @@
 import React, { HTMLProps } from "react";
 import { cn, createTitle } from "../utils";
-import { useRecipeContext } from "../provider";
 
 export type Props = React.PropsWithChildren &
   HTMLProps<HTMLSpanElement> & {
@@ -34,25 +33,13 @@ export default function RecipeRef({
   path,
   tag: Tag = "a",
 }: Props): React.ReactNode {
-  const { theme } = useRecipeContext();
   let url = new URL(path, baseUrl);
-  if (theme === "raw") {
-    <Tag
-      tabIndex={0}
-      href={url.toString()}
-      title={createTitle(quantity, unit)}
-      className={className}
-      target="_blank noopener noreferrer"
-    >
-      {children}
-    </Tag>;
-  }
   return (
     <Tag
       tabIndex={0}
       href={url.toString()}
       title={createTitle(quantity, unit)}
-      className={cn("text-link hover:text-link/90", className)}
+      className={cn("recp--reciperef text-link hover:text-link/90", className)}
       target="_blank noopener noreferrer"
     >
       {children}

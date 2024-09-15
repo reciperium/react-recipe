@@ -1,11 +1,15 @@
-import type { Meta } from "@storybook/react";
-
+import { Meta, StoryObj } from "@storybook/react";
 import Material from "./Material";
 
-export default {
+const meta: Meta<typeof Material> = {
   component: Material,
-} as Meta<typeof Material>;
+};
 
-export const Default = ({}) => {
-  return <Material>Hello</Material>;
+export default meta;
+type Story = StoryObj<typeof Material>;
+
+export const Default: Story = {
+  args: {
+    children: "Non-stick pan",
+  },
 };

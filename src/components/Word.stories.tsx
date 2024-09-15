@@ -1,6 +1,15 @@
+import { Meta, StoryObj } from "@storybook/react";
 import Word from "./Word";
 
-export default {
+const meta: Meta<typeof Word> = {
   component: Word,
 };
-export const Default = () => <Word>Hello</Word>;
+
+export default meta;
+type Story = StoryObj<typeof Word>;
+
+export const Default: Story = {
+  args: {
+    children: "Hello",
+  },
+};

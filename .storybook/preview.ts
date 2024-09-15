@@ -13,15 +13,15 @@ const preview: Preview = {
     },
   },
   decorators: [withContext],
-  args: {
-    theme: recipeThemes[0],
-  },
-  argTypes: {
-    theme: {
-      options: recipeThemes,
-      control: { type: "select" }, // Automatically inferred when 'options' is defined
-    },
-  },
+  // args: {
+  //   theme: recipeThemes[0],
+  // },
+  // argTypes: {
+  //   theme: {
+  //     options: recipeThemes,
+  //     control: { type: "select" }, // Automatically inferred when 'options' is defined
+  //   },
+  // },
 };
 
 export default preview;

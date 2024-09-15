@@ -1,5 +1,4 @@
 import type { Preview } from "@storybook/react";
-import { recipeThemes } from "../src";
 import '../src/index.css';
 import withContext from "./withContext";
 

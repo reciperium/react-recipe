@@ -19,17 +19,19 @@ bump:
     cz bump --yes
 
 # build nix expression for the npm package
-nix-build:
+build-nix:
     nix build --fallback --option sandbox relaxed .#react-recipe
 
+# copy package from the nix store
 copy-nix-build:
     mkdir -p dist
     cp -r result/* dist
 
 # build nix expression for the storybook static files
-nix-build-storybook:
+build-nix-storybook:
     nix build --fallback --option sandbox relaxed .#storybook-static --out-link storybook-static
 
-copy-nix-build-storybook:
+# copy storybook from the nix store
+copy-nix-storybook-build:
     mkdir -p dist
     cp -r storybook-static/* static

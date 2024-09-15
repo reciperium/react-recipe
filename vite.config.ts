@@ -18,7 +18,7 @@ export default defineConfig({
       // // the proper extensions will be added
       fileName: 'react-recipe',
     },
-    chunkSizeWarningLimit: 1024,
+    chunkSizeWarningLimit: 1600,
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library

@@ -7,7 +7,6 @@ import { Switch } from "./components/Switch";
 import Timer from "./components/Timer";
 import Word from "./components/Word";
 import { useWakeLock } from "./hooks/use-wake-lock";
-import { RecipeProvider, recipeThemes, useRecipeContext } from "./provider";
 import { ind } from "./utils";
 
 export {
@@ -16,12 +15,9 @@ export {
   Ingredient,
   Instructions,
   Material,
-  RecipeProvider,
   RecipeRef,
-  recipeThemes,
   Switch,
   Timer,
-  useRecipeContext,
   useWakeLock,
   Word
 };

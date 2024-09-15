@@ -1,6 +1,5 @@
 import type { Preview } from "@storybook/react";
 import '../src/index.css';
-import withContext from "./withContext";
 
 const preview: Preview = {
   parameters: {
@@ -11,7 +10,8 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [withContext],
+  // decorators: [withContext],
+  decorators: [],
   // args: {
   //   theme: recipeThemes[0],
   // },

@@ -1,4 +1,4 @@
-import { RecipeProvider, useRecipeContext } from "../src";
+import { RecipeProvider, useRecipeContext } from "../src/provider";
 
 import React from "react";
 

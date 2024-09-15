@@ -1,3 +1,9 @@
+## v0.6.0 (2024-09-15)
+
+### Fix
+
+- remove context from components
+
 ## v0.5.3 (2024-09-08)
 
 ### Fix

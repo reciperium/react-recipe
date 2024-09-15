@@ -1,3 +1,9 @@
+## v0.7.0 (2024-09-15)
+
+### Fix
+
+- remove context provider
+
 ## v0.6.0 (2024-09-15)
 
 ### Fix

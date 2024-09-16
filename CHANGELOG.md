@@ -1,3 +1,10 @@
+## v0.7.1 (2024-09-16)
+
+### Fix
+
+- storybook build param
+- update vite config
+
 ## v0.7.0 (2024-09-15)
 
 ### Fix

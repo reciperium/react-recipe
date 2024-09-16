@@ -1,4 +1,4 @@
-import{jsx as o}from"react/jsx-runtime";import{c as l,a as m}from"./utils-B20MGt8m.js";function c({quantity:e,unit:n,children:t,className:r,baseUrl:a,path:p,tag:i="a"}){let s=new URL(p,a);return o(i,{tabIndex:0,href:s.toString(),title:l(e,n),className:m("recp--reciperef text-link hover:text-link/90",r),target:"_blank noopener noreferrer",children:t})}c.__docgenInfo={description:`Renders a clickable link to a recipe.
+import{j as o}from"./jsx-runtime-DEdD30eg.js";import{c as l,a as m}from"./utils-B6CGsdxQ.js";function c({quantity:e,unit:t,children:n,className:r,baseUrl:a,path:p,tag:i="a"}){let s=new URL(p,a);return o.jsx(i,{tabIndex:0,href:s.toString(),title:l(e,t),className:m("recp--reciperef text-link hover:text-link/90",r),target:"_blank noopener noreferrer",children:n})}c.__docgenInfo={description:`Renders a clickable link to a recipe.
 
 @component
 @param {Props} props - The component props.

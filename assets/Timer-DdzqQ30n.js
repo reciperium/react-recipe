@@ -1,1 +1,0 @@
-import{jsx as o}from"react/jsx-runtime";import{a}from"./utils-B20MGt8m.js";function m({children:r,className:e}){return o("span",{className:a("recp--timer bg-orange-100 dark:bg-orange-800 mb-1",e),children:r})}m.__docgenInfo={description:"",methods:[],displayName:"Timer"};export{m as T};

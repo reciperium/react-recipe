@@ -13,7 +13,7 @@ export default defineConfig({
     dts({
       rollupTypes: true, tsconfigPath: "./tsconfig.app.json", insertTypesEntry: true,
     }),
-    nodeExternals(),
+    process.env.STORYBOOK !== "yes" && nodeExternals(),
   ],
   build: {
     target: 'esnext',

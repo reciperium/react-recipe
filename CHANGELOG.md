@@ -1,3 +1,13 @@
+## v0.8.0 (2024-09-16)
+
+### BREAKING CHANGE
+
+- Some of the packages must be imported from 'client'
+
+### Fix
+
+- properly configure package to output index and index-client
+
 ## v0.7.1 (2024-09-16)
 
 ### Fix

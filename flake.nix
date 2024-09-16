@@ -51,8 +51,11 @@
               };
               npmConfigHook = pkgs.importNpmLock.npmConfigHook;
 
-              nativeBuildInputs = [ nodejs ];
+              nativeBuildInputs = [ nodejs config.packages.react-recipe ];
               buildPhase = ''
+                mkdir dist
+                cp ${config.packages.react-recipe}/** dist/
+                chmod -R 777 dist
                 ${nodejs}/bin/npm run build-storybook --unsafe-perm=true
               '';
               installPhase = ''

@@ -1,3 +1,13 @@
+## v0.9.0 (2024-09-16)
+
+### BREAKING CHANGE
+
+- Import CookMode from `client`
+
+### Fix
+
+- move CookMode to client
+
 ## v0.8.0 (2024-09-16)
 
 ### BREAKING CHANGE

@@ -3,10 +3,10 @@ import Ingredient from "./components/Ingredient";
 import Instructions from "./components/Instructions";
 import Material from "./components/Material";
 import RecipeRef from "./components/RecipeRef";
-import { Switch } from "./components/Switch";
+
 import Timer from "./components/Timer";
 import Word from "./components/Word";
-import { useWakeLock } from "./hooks/use-wake-lock";
+
 import { ind } from "./utils";
 
 export {
@@ -16,9 +16,7 @@ export {
   Instructions,
   Material,
   RecipeRef,
-  Switch,
   Timer,
-  useWakeLock,
   Word
 };
 

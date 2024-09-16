@@ -3,38 +3,31 @@ import { defineConfig } from 'vite'
 import wasm from "vite-plugin-wasm";
 import react from '@vitejs/plugin-react-swc'
 import dts from 'vite-plugin-dts'
+import nodeExternals from 'rollup-plugin-node-externals'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), wasm(), dts({
-    rollupTypes: true, tsconfigPath: "./tsconfig.app.json", insertTypesEntry: true,
-  }),],
+  plugins: [
+    react(),
+    wasm(),
+    dts({
+      rollupTypes: true, tsconfigPath: "./tsconfig.app.json", insertTypesEntry: true,
+    }),
+    nodeExternals(),
+  ],
   build: {
     target: 'esnext',
     lib: {
-      // Could also be a dictionary or array of multiple entry points
-      entry: resolve(__dirname, 'src/index.ts'),
+      entry: {
+        index: resolve(__dirname, 'src/index.ts'),
+        "index-client": resolve(__dirname, 'src/index-client.ts'),
+      },
       name: 'ReactRecipe',
       // // the proper extensions will be added
-      fileName: 'react-recipe',
+      // fileName: 'react-recipe',
     },
     chunkSizeWarningLimit: 500,
-    rollupOptions: {
-      // make sure to externalize deps that shouldn't be bundled
-      // into your library
-      external: ['react', 'react-dom'],
-      output: {
-        // Provide global variables to use in the UMD build
-        // for externalized deps
-        globals: {
-          react: 'React',
-        },
-        // manualChunks: {
-        //   storybook: ['storybook'],
-        //   storyblocks: ["@storybook/blocks"],
-        // }
-      },
-    },
+    rollupOptions: {},
   },
 
 })

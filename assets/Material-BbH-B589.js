@@ -1,0 +1,1 @@
+import{jsx as r}from"react/jsx-runtime";import{a as o}from"./utils-B20MGt8m.js";function t({children:a,className:e}){return r("span",{className:o("recp--material bg-yellow-100 dark:bg-yellow-800 mb-1",e),children:a})}t.__docgenInfo={description:"",methods:[],displayName:"Material"};export{t as M};

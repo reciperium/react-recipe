@@ -1,3 +1,9 @@
+## v0.10.0 (2024-09-23)
+
+### Feat
+
+- expose some wasm functions
+
 ## v0.9.3 (2024-09-18)
 
 ### Fix

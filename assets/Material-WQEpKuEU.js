@@ -1,0 +1,1 @@
+import{j as r}from"./jsx-runtime-DEdD30eg.js";import{a as o}from"./utils-BQzv5JxN.js";function s({children:a,className:e}){return r.jsx("span",{className:o("recp--material bg-yellow-100 dark:bg-yellow-800 mb-1",e),children:a})}s.__docgenInfo={description:"",methods:[],displayName:"Material"};export{s as M};

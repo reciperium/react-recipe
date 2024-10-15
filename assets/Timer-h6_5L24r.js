@@ -1,0 +1,1 @@
+import{j as o}from"./jsx-runtime-DEdD30eg.js";import{a}from"./utils-BQzv5JxN.js";function m({children:r,className:e}){return o.jsx("span",{className:a("recp--timer bg-orange-100 dark:bg-orange-800 mb-1",e),children:r})}m.__docgenInfo={description:"",methods:[],displayName:"Timer"};export{m as T};

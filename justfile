@@ -1,5 +1,6 @@
 # run development environment
 run:
+    npm i
     npm run dev
 
 # build the npm package

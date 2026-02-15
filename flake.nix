@@ -11,17 +11,32 @@
     gitignore.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ flake-parts, nixpkgs, gitignore, ... }:
+  outputs =
+    inputs@{
+      flake-parts,
+      nixpkgs,
+      gitignore,
+      ...
+    }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       debug = true;
       imports = [
         inputs.devenv.flakeModule
       ];
 
-      systems = [ "x86_64-linux" "aarch64-darwin" "x86_64-darwin" ];
-      perSystem = { config, self', inputs', pkgs, system, ... }:
+      systems = [
+        "x86_64-linux"
+        "aarch64-darwin"
+        "x86_64-darwin"
+      ];
+      perSystem =
+        {
+          config,
+          pkgs,
+          ...
+        }:
         let
-          nodejs = pkgs.nodejs_20;
+          nodejs = pkgs.nodejs_24;
         in
         {
           packages = {
@@ -51,7 +66,10 @@
               };
               npmConfigHook = pkgs.importNpmLock.npmConfigHook;
 
-              nativeBuildInputs = [ nodejs config.packages.react-recipe ];
+              nativeBuildInputs = [
+                nodejs
+                config.packages.react-recipe
+              ];
               buildPhase = ''
                 mkdir dist
                 cp ${config.packages.react-recipe}/** dist/
@@ -70,7 +88,7 @@
             packages = with pkgs; [
               just
               commitizen
-              nodejs_20
+              nodejs
               prefetch-npm-deps
             ];
 

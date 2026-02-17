@@ -38,14 +38,14 @@
     "build-storybook": "STORYBOOK=yes storybook build"
   },
   "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^18.3.1 || ^19.0.0",
+    "react-dom": "^18.3.1 || ^19.0.0"
   },
   "dependencies": {
-    "@radix-ui/react-switch": "^1.1.1",
-    "@reciperium/recipe-parser-wasm": "^0.1.11",
+    "@radix-ui/react-switch": "^1.2.6",
+    "@reciperium/recipe-parser-wasm": "^0.1.23",
     "clsx": "^2.1.1",
-    "tailwind-merge": "^2.5.4"
+    "tailwind-merge": "^3.4"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^2.0.2",
@@ -59,8 +59,8 @@
     "@storybook/react-vite": "^8.3.5",
     "@storybook/test": "^8.3.5",
     "@storybook/types": "^8.3.5",
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "^18.3.11 || ^19.0.0",
+    "@types/react-dom": "^18.3.1 || ^19.0.0",
     "@typescript-eslint/eslint-plugin": "^8.9.0",
     "@typescript-eslint/parser": "^8.9.0",
     "@vitejs/plugin-react-swc": "^3.7.1",

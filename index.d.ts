@@ -1,6 +1,6 @@
 import { default as default_2 } from 'react';
 import { HTMLProps } from 'react';
-import { JSX as JSX_2 } from 'react/jsx-runtime';
+import { JSX } from 'react/jsx-runtime';
 import { Token } from '@reciperium/recipe-parser-wasm';
 
 /**
@@ -15,7 +15,7 @@ export declare function ind(strings: TemplateStringsArray): string;
 
 export declare function Ingredient({ quantity, unit, children, className, }: Props): default_2.ReactNode;
 
-export declare function Instructions({ tokens, RecipeRefResolver, baseUrl, }: Props_2): JSX_2.Element;
+export declare function Instructions({ tokens, RecipeRefResolver, baseUrl, }: Props_2): JSX.Element;
 
 export declare function Material({ children, className }: Props_3): default_2.ReactNode;
 
@@ -60,8 +60,8 @@ declare type Props_6 = React.PropsWithChildren & HTMLProps<HTMLSpanElement> & {}
  */
 export declare function RecipeRef({ quantity, unit, children, className, baseUrl, path, tag: Tag, }: Props_4): default_2.ReactNode;
 
-export declare function Timer({ children, className }: Props_5): JSX_2.Element;
+export declare function Timer({ children, className }: Props_5): JSX.Element;
 
-export declare function Word({ children }: Props_6): JSX_2.Element;
+export declare function Word({ children }: Props_6): JSX.Element;
 
 export { }

@@ -1,3 +1,9 @@
+## v0.11.2 (2026-02-17)
+
+### Fix
+
+- **flake**: use mkShell instead of devenv
+
 ## v0.11.1 (2026-02-17)
 
 ### Fix

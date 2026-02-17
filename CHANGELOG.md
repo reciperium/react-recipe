@@ -1,3 +1,17 @@
+## v0.11.0 (2026-02-17)
+
+### Feat
+
+- bump deps and allow react 19
+
+### Fix
+
+- **tailwind**: update to latest
+- **storybook**: update
+- update node-version
+- **ci**: use trusted publisher
+- **flake**: bump dependencies
+
 ## v0.10.1 (2024-10-15)
 
 ### Fix

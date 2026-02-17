@@ -13,7 +13,7 @@ build-storybook:
 
 # publish the npm package
 publish:
-    npm publish
+    npm publish --provenance --access public
 
 # increase the version of the npm package
 bump:

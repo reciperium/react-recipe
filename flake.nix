@@ -83,16 +83,15 @@
             };
           };
 
-          devenv.shells.default = {
+          devShells.default = pkgs.mkShell {
             name = "react-recipe-shell";
             packages = with pkgs; [
               just
               commitizen
               nodejs
-              prefetch-npm-deps
             ];
 
-            enterShell = ''
+            shellHook = ''
               just --list
             '';
           };
